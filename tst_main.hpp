@@ -35,11 +35,11 @@ public:
     void printBoxed(const std::string & text, const int width = 80, const char liner = '=', const char edge = '#');
 
 private slots:
+    void test_xmlconvenience();
     void test_SDL_globals();
     void test_window_mainloop();
     void test_gfxStore();
     void test_animation();
-    void test_xmlconvenience();
 };
 
 #endif // TST_MAIN_HPP

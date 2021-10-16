@@ -32,4 +32,5 @@ HEADERS += \
     ../Mockepon-Overworld/pugiconfig.hpp \
     ../Mockepon-Overworld/pugixml.hpp \
     ../Mockepon-Overworld/window.hpp \
+    ../Mockepon-Overworld/xmlconvenience.hpp \
     tst_main.hpp

@@ -22,8 +22,6 @@
 void Test::test_gfxStore() {
     return;
 
-    printBoxed("About to test GfxStore");
-
     Window w ("GfxStore Test Window", 60, 60);
     GfxStore store(w);
 
@@ -42,6 +40,4 @@ void Test::test_gfxStore() {
 
     store.show(0);
     store.show(1);
-
-    std::cout << "ok." << std::endl;
 }

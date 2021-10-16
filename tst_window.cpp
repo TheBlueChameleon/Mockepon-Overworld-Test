@@ -34,14 +34,10 @@ void renderFunc ([[maybe_unused]] void * data) {
 void Test::test_window_mainloop() {
     return;
 
-    printBoxed("About to test Window");
-
     Window w ("Window Title");
 
     w.setIdleFunc(renderFunc);
     w.setIdleData(&w);
 
     w.mainloop();
-
-    QVERIFY(1 == 1);
 }

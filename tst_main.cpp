@@ -65,11 +65,7 @@ void Test::printBoxed(const std::string & text, const int width, const char line
 // Globals Tests
 
 void Test::test_SDL_globals() {
-    printBoxed("Testing SDL globals");
-
-    std::cout << "Font loaded ... " << std::flush;
     QVERIFY( font_fixedSize != nullptr );
-    std::cout << "ok" << std::endl;
 }
 
 // ========================================================================== //

@@ -21,7 +21,7 @@
 // Test Cases
 
 void Test::test_animation() {
-    printBoxed("About to test Animation");
+    return;
 
     Window w ("Animation Test Window", 100, 100);
     GfxStore store(w);
@@ -57,6 +57,4 @@ void Test::test_animation() {
             );
 
     ani.show(25, 25);
-
-    std::cout << "ok." << std::endl;
 }

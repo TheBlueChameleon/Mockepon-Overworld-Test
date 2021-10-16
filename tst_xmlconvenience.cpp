@@ -15,13 +15,40 @@
 // Test Cases
 
 void Test::test_xmlconvenience() {
-    printBoxed("About to test XML convenience module");
-
     pugi::xml_document doc;
+
     QVERIFY_EXCEPTION_THROWN(
-                doc = loadXML("no file"),
+                doc = loadXML("no valid file"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-project-explicit.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-project-implicit.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-project-missing-name.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-version-major.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-version-minor.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-version-missing.xml"),
+                std::runtime_error
+            );
+    QVERIFY_EXCEPTION_THROWN(
+                doc = loadXML("../unittest-xml/invalid-version-text.xml"),
                 std::runtime_error
             );
 
-    std::cout << "ok" << std::endl;
+    doc = loadXML("../unittest-xml/valid-deprecated.xml", "animation");
 }
