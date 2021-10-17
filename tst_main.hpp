@@ -40,6 +40,7 @@ private slots:
     void test_window_mainloop();
     void test_gfxStore();
     void test_animation();
+    void test_animationStore();
 };
 
 #endif // TST_MAIN_HPP

@@ -19,7 +19,9 @@ SOURCES += \
     ../Mockepon-Overworld/window.cpp \
     ../Mockepon-Overworld/gfxstore.cpp \
     ../Mockepon-Overworld/xmlconvenience.cpp \
+    ../Mockepon-Overworld/animationstore.cpp \
     tst_animation.cpp \
+    tst_animationstore.cpp \
     tst_gfxStore.cpp \
     tst_main.cpp \
     tst_window.cpp \
@@ -33,4 +35,5 @@ HEADERS += \
     ../Mockepon-Overworld/pugixml.hpp \
     ../Mockepon-Overworld/window.hpp \
     ../Mockepon-Overworld/xmlconvenience.hpp \
+    ../Mockepon-Overworld/animationstore.hpp \
     tst_main.hpp

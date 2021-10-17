@@ -24,8 +24,8 @@ void Test::test_animation() {
     return;
 
     Window w ("Animation Test Window", 100, 100);
-    GfxStore store(w);
-    Animation ani(store);
+    GfxStore gfxStore(w);
+    Animation ani(gfxStore);
 
     QVERIFY(ani.getSize() == 0);
     QVERIFY(ani.getCurrentFrameID() == 0);
@@ -47,7 +47,7 @@ void Test::test_animation() {
     ani.addFrame("../unittest-gfx/frame10.png");
 
     ani.addFrame("../unittest-gfx/frame10.png");
-    QVERIFY(store.getSize() == 10);
+    QVERIFY(gfxStore.getSize() == 10);
     QVERIFY(ani  .getSize() == 11);
 
 

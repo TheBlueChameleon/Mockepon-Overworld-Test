@@ -30,9 +30,9 @@ void Test::test_gfxStore() {
                 std::out_of_range
     );
 
-    QVERIFY( store.load("../unittest-gfx/frame01.png") == 0 );
-    QVERIFY( store.load("../unittest-gfx/frame04.png") == 1 );
-    QVERIFY( store.load("../unittest-gfx/frame04.png") == 1 );
+    QVERIFY( store.addFrame("../unittest-gfx/frame01.png") == 0 );
+    QVERIFY( store.addFrame("../unittest-gfx/frame04.png") == 1 );
+    QVERIFY( store.addFrame("../unittest-gfx/frame04.png") == 1 );
 
     QVERIFY( store.getSize() == 2 );
     QVERIFY( store.getFilename(0) == "../unittest-gfx/frame01.png" );
